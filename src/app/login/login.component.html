@@ -1,0 +1,16 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+  <input placeholder="login" type="email" formControlName="email" />
+  <input placeholder="password" type="password" formControlName="password" />
+  <re-captcha
+    (resolved)="resolved($event)"
+    formControlName="captcha"
+    siteKey="6Lfqxm4UAAAAAFUez_DrARHZwCPwe1b9Fqg65wOS"
+  ></re-captcha>
+  <button
+    [class]="{ disabled: !loginForm.valid }"
+    type="submit"
+    [disabled]="!loginForm.valid"
+  >
+    Login
+  </button>
+</form>

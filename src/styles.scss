@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  * {
+    display: block;
+    margin: auto;
+  }
+}
+
+input {
+  margin: 2rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid black;
+  outline: none;
+  padding: 0.5rem;
+  &:focus {
+    border-bottom: 0.3rem solid black;
+  }
+}
+button {
+  &:active {
+    background-color: lightblue;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem lightblue inset;
+  }
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+
+  &.disabled {
+    background-color: lightgray;
+  }
+}
+
+.login-form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  max-width: fit-content;
+}

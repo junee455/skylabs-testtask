@@ -1,0 +1,6 @@
+<ng-container *ngIf="!!userInfo">
+  <div>Email: {{ userInfo.email }}</div>
+  <div>Role: {{ userInfo.role }}</div>
+</ng-container>
+
+<button (click)="logout()">Logout</button>
